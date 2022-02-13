@@ -1,9 +1,12 @@
+import { Button } from '@mui/material'
 import React from 'react'
 
+
 export const Home = () => {
+
   return (
     <div>
-      dskja
+      <Button variant='contained' color='primary'>press</Button>
     </div>
   )
 }

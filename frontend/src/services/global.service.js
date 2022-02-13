@@ -1,15 +1,11 @@
-import axios from 'axios'
 
-export const loadPokeApi = async() => {
+import { get } from './shared/rest.service'
+
+export const loadPokeApi = async(categories) => {
+    // categories es UN TEXTO que puede ser por ejemplo pokemons || locations || pokeball
     try {
-        const url = 'https://pokeapi.co/api/v2/pokemon/pikachu'
-        const result = await axios (url, {
-            method: 'GET',
-            headers: {'content-type': 'application/json'},
-            data: null
-        })
-        console.log(result.data.name)
-        return result.data.name
+        const result = await get(categories)
+        return result
     }catch(error){
         return error 
     }

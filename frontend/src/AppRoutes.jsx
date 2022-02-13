@@ -5,7 +5,7 @@ export const AppRoutes = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='pokemon/*' element={<RoutesPokemon/>}/>
+        <Route path='pokeapi/*' element={<RoutesPokemon/>}/>
       </Routes>
     </BrowserRouter>
   )

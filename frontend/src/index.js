@@ -1,12 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './App.scss';
 import {AppRoutes} from './AppRoutes';
 import reportWebVitals from './reportWebVitals';
+import {createTheme} from '@mui/material/styles'
+import { ThemeProvider } from '@emotion/react';
+
+const theme = createTheme({
+  palette:{
+    primary: {
+      light:'#ffe167',
+      main:'#fbd743',
+      dark:'#e4c33e'
+    },
+    secundary: {
+      light: '#82c5f8',
+      main:'#5db9ff',
+      dark: '#1f94ed'
+    },
+  }
+})
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppRoutes />
+    <ThemeProvider theme={theme}>
+      <AppRoutes/>
+    </ThemeProvider>
+    
   </React.StrictMode>,
   document.getElementById('root')
 );
