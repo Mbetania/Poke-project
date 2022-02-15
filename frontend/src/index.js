@@ -5,6 +5,8 @@ import {AppRoutes} from './AppRoutes';
 import reportWebVitals from './reportWebVitals';
 import {createTheme} from '@mui/material/styles'
 import { ThemeProvider } from '@emotion/react';
+import "nes.css/css/nes.min.css";
+
 
 const theme = createTheme({
   palette:{
